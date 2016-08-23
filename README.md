@@ -6,4 +6,28 @@ the criteria for selection is decided by the decorator when it calls the recycle
 `isSelected(int position)` method. Therefore as a pre-requisite you must implement the SelectableAdapter 
 interface in the `Recyclerview`'s adapter to which you are adding the decoration to. 
 
-Please check the sample app for a demonstration on the usage of the item decoration class.
+## Sample Screenshots:
+[Sample 1](assets/Selection_001.png)
+[Sample 2](assets/Selection_002.png)
+
+## How to use:
+ - Instantiate the class and add it to your recyclerview like so:
+```
+list.addItemDecoration(new SelectedItemDecoration(getColor(R.color.colorAccent), getResources().getDimension(R.dimen.stroke_width)));
+```
+
+ - Implement the `SelectedItemDecoration.SelectableAdapter` Interface In your `RecyclerView.Adapter` extension like so:
+```
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
+        implements SelectedItemDecoration.SelectableAdapter
+```
+
+ - In the `isSelected(int position)` method implementation of your adapter class (inherited from the `SelectedItemDecoration.SelectableAdapter` interface) write the logic to decide if the current item (decided from the position value) is selected or not. (You can do this in multiple ways, for example in the sample app I have mainted a `Map<Integer,Boolean>` to decide if  the view is selected)
+
+
+## Features:
+- Defaults to a stroke only rectangle as shown in screen shot number 2.
+- Supports adding Drawables, the drawables get drawn over the recyclerview item, as shown in screenshot number 1.
+
+## LICENSE:
+[Apache 2.0](LICENSE)

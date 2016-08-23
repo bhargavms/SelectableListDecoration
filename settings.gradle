@@ -1,1 +1,1 @@
-include ':sample', ':selectablelistdecoration'
+include ':sample', ':library'

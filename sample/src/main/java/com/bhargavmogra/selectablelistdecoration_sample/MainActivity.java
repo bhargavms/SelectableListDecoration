@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         assert list != null;
         list.setLayoutManager(new LinearLayoutManager(this));
         list.setAdapter(adapter);
-        list.addItemDecoration(new SelectedItemDecoration(this, R.color.colorAccent, R.dimen.stroke_width));
+        list.addItemDecoration(new SelectedItemDecoration(getColor(R.color.colorAccent),
+                getResources().getDimension(R.dimen.stroke_width)));
     }
 }

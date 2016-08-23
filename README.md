@@ -29,5 +29,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder>
 - Defaults to a stroke only rectangle as shown in screen shot number 2.
 - Supports adding Drawables, the drawables get drawn over the recyclerview item, as shown in screenshot number 1.
 
+```
+list.addItemDecoration(new SelectedItemDecoration(getResources()
+                .getDrawable(R.drawable.border_purple_texture_scaled)));
+```
+
 ## LICENSE:
 [Apache 2.0](LICENSE)

@@ -7,8 +7,8 @@ the criteria for selection is decided by the decorator when it calls the recycle
 interface in the `Recyclerview`'s adapter to which you are adding the decoration to. 
 
 ## Sample Screenshots:
-[Sample 1](assets/Selection_001.png)
-[Sample 2](assets/Selection_002.png)
+![Sample 1](assets/Selection_001.png)
+![Sample 2](assets/Selection_002.png)
 
 ## How to use:
  - Instantiate the class and add it to your recyclerview like so:

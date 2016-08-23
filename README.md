@@ -10,6 +10,26 @@ interface in the `Recyclerview`'s adapter to which you are adding the decoration
 ![Sample 1](assets/Selection_001.png)
 ![Sample 2](assets/Selection_002.png)
 
+## Including in gradle:
+
+Add to your root build.gradle:
+
+```
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+Add to your module (app) build.gradle:
+
+```
+dependencies {
+    compile 'com.github.bhargavms:SelectableListDecoration:1.0.0'
+}
+```
+
 ## How to use:
  - Instantiate the class and add it to your recyclerview like so:
 ```
